@@ -179,7 +179,7 @@
                             $("#error").html("<p align='center'><img src='imagenes/ajax-loader.gif' /></p>");
                         },
                         success: function (data) {
-                            var res = JSON.parse(data);// $.parseJSON(data);
+                            var res = JSON.parse(data);
                             $("#imgProfile").attr("src",res.url);
                         },
                         error: function (e) {
@@ -204,7 +204,7 @@
                     cache: false,
                     processData:false,
                     beforeSend: function(){
-                        contenido= "<div class='col s12 m12 center'><div class='preloader-wrapper big active'><div class='spinner-layer spinner-blue-only'><div class='circle-clipper left'><div class='circle'></div></div><div class='gap-patch'><div class='circle'></div></div><div class='circle-clipper right'><div class='circle'></div></div></div></div></div>";
+                        const contenido= "<div class='col s12 m12 center'><div class='preloader-wrapper big active'><div class='spinner-layer spinner-blue-only'><div class='circle-clipper left'><div class='circle'></div></div><div class='gap-patch'><div class='circle'></div></div><div class='circle-clipper right'><div class='circle'></div></div></div></div></div>";
                         $("#MsgClave").html(contenido);
                     },
                     success: function(data, textStatus, jqXHR)
